@@ -1,3 +1,26 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+header {
+	display: flex;
+	flex-direction: row;
+	background-color: rgb(98, 134, 167);
+	height: 100px;
+	justify-content: space-between;
+	img {
+		display: block;
+	}
+	ul {
+		display: flex;
+		flex-direction: row;
+
+		li {
+			display: flex;
+			flex-direction: column;
+			p {
+				margin: 0;
+				padding: 0;
+			}
+		}
+	}
+}

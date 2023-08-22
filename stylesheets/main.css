@@ -6,6 +6,9 @@
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -345,6 +348,9 @@ ul, li, p, h1, h2, h3, img, figure, article, section, main, header, nav, footer,
   text-decoration: none;
 }
 
+/* Navbar Title */
+/* Heading */
+/* paragraph  */
 /**
  * Basic typography style for copy text
  */
@@ -405,6 +411,193 @@ body {
   width: 1px;
 }
 
+header {
+  display: flex;
+  flex-direction: row;
+  background-color: rgb(98, 134, 167);
+  height: 100px;
+  justify-content: space-between;
+}
+header img {
+  display: block;
+}
+header ul {
+  display: flex;
+  flex-direction: row;
+}
+header ul li {
+  display: flex;
+  flex-direction: column;
+}
+header ul li p {
+  margin: 0;
+  padding: 0;
+}
+
+footer {
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+  z-index: -10;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-evenly;
+  background-color: #445061;
+  color: #fdfedb;
+  font-size: 1rem;
+  font-family: "Montserrat", sans-serif;
+  padding: 70px;
+}
+footer .separate_footer {
+  width: 1px;
+  background-color: #fdfedb;
+  height: auto;
+}
+@media (max-width: 1024px) {
+  footer {
+    flex-direction: column;
+    align-items: center;
+    padding: 20px;
+    position: unset;
+  }
+  footer .separate_footer {
+    width: 100%;
+    background-color: #fdfedb;
+    height: 1px;
+    margin: 50px 0 50px 0;
+  }
+}
+footer .adress,
+footer .summary,
+footer .useful_links {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex-basis: 200px;
+}
+@media (max-width: 1024px) {
+  footer .adress,
+  footer .summary,
+  footer .useful_links {
+    padding: 0;
+    flex-basis: 300px;
+    align-self: stretch;
+  }
+  footer .adress:last-child,
+  footer .summary:last-child,
+  footer .useful_links:last-child {
+    border: none;
+  }
+}
+footer .adress li,
+footer .summary li,
+footer .useful_links li {
+  margin-bottom: 15px;
+}
+footer .adress li:last-child,
+footer .summary li:last-child,
+footer .useful_links li:last-child {
+  margin-bottom: 0;
+}
+footer .adress a,
+footer .summary a,
+footer .useful_links a {
+  display: block;
+  color: #fdfedb;
+}
+footer .adress a:hover,
+footer .summary a:hover,
+footer .useful_links a:hover {
+  color: #fdfedb;
+}
+footer .adress li:first-child {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+footer .adress li:nth-child(5) a {
+  color: #fdfedb;
+}
+footer .adress li:nth-child(5) a figure {
+  padding: 0;
+  margin: 0;
+}
+footer .adress li:nth-child(5) a figure img {
+  width: 100%;
+  display: block;
+}
+footer .summary li:first-child {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+footer .summary li a {
+  position: relative;
+}
+footer .summary li a::before {
+  background-image: url(/img/arrow.svg);
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+footer .summary li a:hover {
+  color: rgba(253, 254, 219, 0.5);
+}
+footer .useful_links li:first-child {
+  font-weight: 900;
+  font-size: 1.5rem;
+}
+footer .useful_links li:last-child {
+  width: 30px;
+}
+footer .useful_links li:nth-child(2) {
+  position: relative;
+}
+footer .useful_links li:nth-child(2)::before {
+  background-image: url(/img/arrow.svg);
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+footer .useful_links li:nth-child(3) {
+  position: relative;
+}
+footer .useful_links li:nth-child(3)::before {
+  background-image: url(/img/arrow.svg);
+  content: "";
+  display: block;
+  width: 12px;
+  height: 12px;
+  background-repeat: no-repeat;
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+}
+
 p {
   font-family: "Montserrat", sans-serif;
+}
+
+.bg {
+  height: 1000px;
+  background-color: rgb(62, 61, 78);
+  box-shadow: 10px 10px 23px -7px rgba(0, 0, 0, 0.75);
+  position: relative;
+}
+
+@media (min-width: 1024px) {
+  .bg {
+    margin-bottom: 469.14px;
+  }
 }/*# sourceMappingURL=main.css.map */

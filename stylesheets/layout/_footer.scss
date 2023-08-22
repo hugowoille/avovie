@@ -1,3 +1,157 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the footer of the site/application.
 // -----------------------------------------------------------------------------
+// -----------------------------------------------------------------------------
+// This file contains all styles related to the footer of the site/application.
+// -----------------------------------------------------------------------------
+footer {
+	position: fixed;
+	width: 100%;
+	bottom: 0;
+	z-index: -10;
+	display: flex;
+	flex-direction: row;
+	justify-content: space-evenly;
+	background-color: $bleu;
+	color: $jaune;
+	font-size: 1rem;
+	font-family: $font-titre-montserrat;
+	padding: 70px;
+	.separate_footer {
+		width: 1px;
+		background-color: $jaune;
+		height: auto;
+	}
+	@media (max-width: 1024px) {
+		flex-direction: column;
+		align-items: center;
+		padding: 20px;
+		position: unset;
+		.separate_footer {
+			width: 100%;
+			background-color: $jaune;
+			height: 1px;
+			margin: 50px 0 50px 0;
+		}
+	}
+	.adress,
+	.summary,
+	.useful_links {
+		display: flex;
+		flex-direction: column;
+		justify-content: space-between;
+		flex-basis: 200px;
+
+		@media (max-width: 1024px) {
+			padding: 0;
+			flex-basis: 300px;
+			align-self: stretch;
+			&:last-child {
+				border: none;
+			}
+		}
+		li {
+			margin-bottom: 15px;
+			&:last-child {
+				margin-bottom: 0;
+			}
+		}
+		a {
+			display: block;
+			color: $jaune;
+			&:hover {
+				color: $jaune;
+			}
+		}
+	}
+	.adress {
+		li {
+			&:first-child {
+				font-weight: 900;
+				font-size: 1.5rem;
+			}
+			&:nth-child(5) {
+				a {
+					color: $jaune;
+					figure {
+						padding: 0;
+						margin: 0;
+						img {
+							width: 100%;
+							display: block;
+						}
+					}
+				}
+			}
+		}
+	}
+	.summary {
+		li {
+			&:first-child {
+				font-weight: 900;
+				font-size: 1.5rem;
+			}
+			a {
+				position: relative;
+
+				&::before {
+					background-image: url(/img/arrow.svg);
+					content: "";
+
+					display: block;
+					width: 12px;
+					height: 12px;
+					background-repeat: no-repeat;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+				&:hover {
+					color: rgba($jaune, 0.5);
+				}
+			}
+		}
+	}
+	.useful_links {
+		li {
+			&:first-child {
+				font-weight: 900;
+				font-size: 1.5rem;
+			}
+			&:last-child {
+				width: 30px;
+			}
+			&:nth-child(2) {
+				position: relative;
+				&::before {
+					background-image: url(/img/arrow.svg);
+					content: "";
+					display: block;
+					width: 12px;
+					height: 12px;
+					background-repeat: no-repeat;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+			&:nth-child(3) {
+				position: relative;
+				&::before {
+					background-image: url(/img/arrow.svg);
+					content: "";
+					display: block;
+					width: 12px;
+					height: 12px;
+					background-repeat: no-repeat;
+					position: absolute;
+					right: 0;
+					top: 50%;
+					transform: translateY(-50%);
+				}
+			}
+		}
+	}
+}
