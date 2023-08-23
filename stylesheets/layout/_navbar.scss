@@ -1,0 +1,35 @@
+nav {
+	background-color: $bleu;
+	position: sticky;
+	top: 0;
+	z-index: 20;
+	padding: 0 10%;
+	ul {
+		margin: 0;
+		display: flex;
+		height: 60px;
+		align-items: center;
+		justify-content: flex-start;
+		padding-left: 0;
+		li {
+			border-right: 1px solid $jaune;
+			margin-right: 30px;
+			padding-right: 30px;
+			display: flex;
+			justify-content: center;
+			a {
+				color: white;
+				font-family: $roboto;
+				font-size: 20px;
+				font-weight: 100;
+
+				&:last-child {
+				}
+			}
+
+			&:last-child {
+				border-right: none;
+			}
+		}
+	}
+}

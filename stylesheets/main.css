@@ -5,10 +5,11 @@
  * 1. Correct the line height in all browsers.
  * 2. Prevent adjustments of font size after orientation changes in iOS.
  */
-@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 html {
   line-height: 1.15; /* 1 */
   -webkit-text-size-adjust: 100%; /* 2 */
@@ -348,9 +349,11 @@ ul, li, p, h1, h2, h3, img, figure, article, section, main, header, nav, footer,
   text-decoration: none;
 }
 
-/* Navbar Title */
-/* Heading */
-/* paragraph  */
+/* cinzel */
+/* montserrat */
+/* PlayFair */
+/* Bricolage Grotesque */
+/* roboto  */
 /**
  * Basic typography style for copy text
  */
@@ -414,24 +417,47 @@ body {
 header {
   display: flex;
   flex-direction: row;
-  background-color: rgb(98, 134, 167);
+  background-color: #282e3f;
   height: 100px;
   justify-content: space-between;
+  padding: 0 10%;
 }
 header img {
   display: block;
+  padding: 10px;
 }
 header ul {
   display: flex;
   flex-direction: row;
+  margin: 0;
+  align-items: center;
 }
 header ul li {
   display: flex;
   flex-direction: column;
 }
+header ul li:first-child {
+  border-right: 1px solid white;
+  margin-right: 20px;
+  padding-right: 20px;
+}
 header ul li p {
   margin: 0;
   padding: 0;
+  font-family: "Bricolage Grotesque", sans-serif;
+  font-weight: 300;
+  color: white;
+}
+header ul li p:first-child {
+  font-size: 30px;
+}
+header ul li p:last-child {
+  font-weight: 100;
+}
+header ul li p i {
+  margin-right: 10px;
+  color: #cf9455;
+  font-size: 25px;
 }
 
 footer {
@@ -442,15 +468,15 @@ footer {
   display: flex;
   flex-direction: row;
   justify-content: space-evenly;
-  background-color: #445061;
-  color: #fdfedb;
+  background-color: #333a4d;
+  color: #cf9455;
   font-size: 1rem;
   font-family: "Montserrat", sans-serif;
   padding: 70px;
 }
 footer .separate_footer {
   width: 1px;
-  background-color: #fdfedb;
+  background-color: #cf9455;
   height: auto;
 }
 @media (max-width: 1024px) {
@@ -462,7 +488,7 @@ footer .separate_footer {
   }
   footer .separate_footer {
     width: 100%;
-    background-color: #fdfedb;
+    background-color: #cf9455;
     height: 1px;
     margin: 50px 0 50px 0;
   }
@@ -503,19 +529,19 @@ footer .adress a,
 footer .summary a,
 footer .useful_links a {
   display: block;
-  color: #fdfedb;
+  color: #cf9455;
 }
 footer .adress a:hover,
 footer .summary a:hover,
 footer .useful_links a:hover {
-  color: #fdfedb;
+  color: #cf9455;
 }
 footer .adress li:first-child {
   font-weight: 900;
   font-size: 1.5rem;
 }
 footer .adress li:nth-child(5) a {
-  color: #fdfedb;
+  color: #cf9455;
 }
 footer .adress li:nth-child(5) a figure {
   padding: 0;
@@ -545,7 +571,7 @@ footer .summary li a::before {
   transform: translateY(-50%);
 }
 footer .summary li a:hover {
-  color: rgba(253, 254, 219, 0.5);
+  color: rgba(207, 148, 85, 0.5);
 }
 footer .useful_links li:first-child {
   font-weight: 900;
@@ -583,6 +609,38 @@ footer .useful_links li:nth-child(3)::before {
   right: 0;
   top: 50%;
   transform: translateY(-50%);
+}
+
+nav {
+  background-color: #333a4d;
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  padding: 0 10%;
+}
+nav ul {
+  margin: 0;
+  display: flex;
+  height: 60px;
+  align-items: center;
+  justify-content: flex-start;
+  padding-left: 0;
+}
+nav ul li {
+  border-right: 1px solid #cf9455;
+  margin-right: 30px;
+  padding-right: 30px;
+  display: flex;
+  justify-content: center;
+}
+nav ul li a {
+  color: white;
+  font-family: "Roboto", sans-serif;
+  font-size: 20px;
+  font-weight: 100;
+}
+nav ul li:last-child {
+  border-right: none;
 }
 
 p {
