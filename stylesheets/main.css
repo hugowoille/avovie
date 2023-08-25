@@ -555,6 +555,11 @@ footer .footer_col-container li {
   }
 }
 
+#nav-bar {
+  background-color: #222222;
+  height: 70px;
+}
+
 p {
   font-family: "Bricolage Grotesque", sans-serif;
   color: white;
