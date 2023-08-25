@@ -51,21 +51,14 @@ $breakpoints: (
 ///   $base-url: 'https://cdn.example.com/assets/';
 $base-url: "/assets/" !default;
 
-// FONT :
-
-$font-navbar-cinzel: "Cinzel", serif;
-$font-titre-montserrat: "Montserrat", sans-serif;
-$font-p: "Playfair Display", serif;
+$playfair: "Playfair Display", serif;
+$montserrat: "Montserrat", sans-serif;
+$cinzel: "Cinzel", serif;
 $bricolage: "Bricolage Grotesque", sans-serif;
-$playfaire: "Playfair Display", serif;
 $roboto: "Roboto", sans-serif;
 
-// COLORS
-
-$dark_blue: #282e3f;
-$jaune: #cf9455;
-$bleu: #333a4d;
-
-$grey: #4f5051;
-$black: #050505;
-$lightgrey: #9fa1a2;
+$darkGrey: #222222;
+$rouge: #a02c57;
+$lightGrey: #b4b4b4;
+$jaune: #fdfedb;
+$bleu: #445061;

@@ -46,65 +46,49 @@
 		<meta name="theme-color" content="#fafafa" />
 	</head>
 	<body>
-		<header>
-			<img src="img/logo avovie.png" alt="logo avovie" />
-			<ul>
-				<li>
-					<p><i class="fa-regular fa-calendar"> </i>8:00 - 19:00</p>
-					<p>Horraires d'ouvertures : Lun. - Ven.</p>
-				</li>
-				<li>
-					<p><i class="fa-solid fa-phone"></i>06.06.06.06.06</p>
-					<p>Appelez nous</p>
-				</li>
-			</ul>
-		</header>
-		<nav>
-			<ul>
-				<li><a href="">Avis</a></li>
-				<li><a href="">Medias</a></li>
-				<li><a href="">L'équipe</a></li>
-				<li><a href="">à propos</a></li>
-				<li><a href="">Plan d'accès</a></li>
-			</ul>
-		</nav>
-		<main class="bg"></main>
+		<nav id="nav-bar"></nav>
+
+		<!-- Main -->
+
+		<main class="main"></main>
+
+		<!-- Footer -->
+
 		<footer>
-			<ul class="adress">
-				<li>Nom de l'entreprise</li>
+			<a id="footer_logo" href="index.html">
+				<figure>
+					<img src="img/logo avovie.png" alt="logo de l'entreprise" />
+				</figure>
+			</a>
+			<ul id="adress" class="footer_col-container">
+				<h3>Contact</h3>
 				<li>
 					Rue de l'entreprise <br />quartier de l'entreprise<br />ville
 					de l'entreprise
 				</li>
 				<li>06.06.06.06.06</li>
 				<li>mail@entreprise.com</li>
-				<li>
-					<a href="index.html">
-						<figure>
-							<img
-								src="img/logo avovie.png"
-								alt="logo de l'entreprise"
-							/>
-						</figure>
-					</a>
-				</li>
 			</ul>
-			<div class="separate_footer"></div>
-			<ul class="summary">
-				<li>Sommaire</li>
+			<ul id="summary" class="footer_col-container">
+				<h3>Sommaire</h3>
 				<li><a href="index.html">Accueil</a></li>
-				<li><a href="page1.html">page1</a></li>
-				<li><a href="page2.html">page2</a></li>
-				<li><a href="page3.html">page3</a></li>
+				<li><a href="page1.html">page 1</a></li>
+				<li><a href="page2.html">page 2</a></li>
+				<li><a href="page3.html">page 3</a></li>
 			</ul>
-			<div class="separate_footer"></div>
-			<ul class="useful_links">
-				<li>Liens utiles</li>
+			<ul id="useful_links" class="footer_col-container">
+				<h3>Liens utiles</h3>
 				<li><a href="">backlink1</a></li>
 				<li><a href="">backlink2</a></li>
-				<li>Suivez nous !</li>
 				<li>
-					<a href="https://www.facebook.com"> </a>
+					<a
+						id="social_network-footer"
+						href="https://www.facebook.com"
+					>
+						<figure>
+							<img src="/img/fbgrey.svg" alt="logo de facebook" />
+						</figure>
+					</a>
 				</li>
 			</ul>
 		</footer>
