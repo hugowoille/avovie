@@ -13,8 +13,10 @@ hamburger.addEventListener("click", () => {
 		trait2.classList.add("trait2-effect");
 		trait3.classList.add("trait3-effect");
 		toggleNav[0].style.transform = "translateX(0)";
+		toggleNav[0].style.opacity = "1";
+
 		navLinks.forEach((item) => {
-			item.style.animation = "bounce 1.5s ";
+			item.style.animation = "bounce 1.5s ease";
 		});
 		isHamburgerClicked = true;
 	} else {
@@ -22,6 +24,8 @@ hamburger.addEventListener("click", () => {
 		trait2.classList.remove("trait2-effect");
 		trait3.classList.remove("trait3-effect");
 		toggleNav[0].style.transform = "translateX(400px)";
+		toggleNav[0].style.opacity = "0";
+
 		navLinks.forEach((item) => {
 			item.style.animation = "none";
 		});

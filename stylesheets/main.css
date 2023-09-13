@@ -623,7 +623,7 @@ footer .footer_col-container li {
   right: 0;
   padding: 10px 25px 10px 50px;
   transform: translateX(400px);
-  transition: transform 0.4s;
+  transition: transform 0.4s, opacity 0.4s;
   width: 100%;
   border-top: 1px solid white;
 }
@@ -645,10 +645,10 @@ footer .footer_col-container li {
     transform: translateX(0);
   }
   40% {
-    transform: translateX(-10px);
+    transform: translateX(-5px);
   }
   60% {
-    transform: translateX(-5px);
+    transform: translateX(-2.5px);
   }
 }
 body {
