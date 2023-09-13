@@ -488,15 +488,24 @@ footer .footer_col-container h3 {
   font-weight: 700;
   color: white;
   position: relative;
+  text-decoration: underline;
+  text-decoration-color: white;
+  text-decoration-thickness: 4px;
+  text-underline-offset: 10px;
+  transition: 0.2s;
+  /* &::after {
+  	content: "";
+  	height: 3px;
+  	width: 70px;
+  	background-color: $rouge;
+  	position: absolute;
+  	bottom: 0;
+  	border-radius: 20px;
+  } */
 }
-footer .footer_col-container h3::after {
-  content: "";
-  height: 3px;
-  width: 70px;
-  background-color: #a02c57;
-  position: absolute;
-  bottom: 0;
-  border-radius: 20px;
+footer .footer_col-container h3:hover {
+  text-decoration-color: #a02c57;
+  text-underline-offset: 15px;
 }
 footer .footer_col-container li {
   font-size: 16px;
@@ -558,6 +567,29 @@ footer .footer_col-container li {
 #nav-bar {
   background-color: #222222;
   height: 70px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+#logo-nav {
+  height: 50px;
+  margin-left: 10px;
+}
+
+.main-navlinks .hamburger {
+  margin-right: 10px;
+}
+
+.navlinks-container {
+  position: absolute;
+  background-color: blue;
+  display: flex;
+  flex-direction: column;
+  top: 70px;
+  left: 0;
+  padding: 25px;
 }
 
 p {

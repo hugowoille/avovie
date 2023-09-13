@@ -1,4 +1,26 @@
 #nav-bar {
 	background-color: $darkGrey;
 	height: 70px;
+	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: space-between;
+}
+#logo-nav {
+	height: 50px;
+	margin-left: 10px;
+}
+.main-navlinks {
+	.hamburger {
+		margin-right: 10px;
+	}
+}
+.navlinks-container {
+	position: absolute;
+	background-color: blue;
+	display: flex;
+	flex-direction: column;
+	top: 70px;
+	left: 0;
+	padding: 25px;
 }
