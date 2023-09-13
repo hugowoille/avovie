@@ -1,6 +1,9 @@
 // -----------------------------------------------------------------------------
 // This file contains styles that are specific to the home page.
 // -----------------------------------------------------------------------------
+body {
+	overflow-x: hidden;
+}
 p {
 	font-family: $bricolage;
 	color: white;

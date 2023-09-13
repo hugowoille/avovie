@@ -52,20 +52,23 @@
 			<img id="logo-nav" src="/img/logo avovie.png" alt="" />
 			<div class="main-navlinks">
 				<button
+					id="hamburger"
 					class="hamburger"
 					type="button"
 					aria-label="Toggle navigation"
 					aria-expanded="false"
 				>
-					<span></span>
-					<span></span>
-					<span></span>
+					<span id="trait1"></span>
+					<span id="trait2"></span>
+					<span id="trait3"></span>
 				</button>
-				<div class="navlinks-container">
-					<a href="#acc" aria-current="page">Accueil</a>
-					<a href="#trava">Travaux</a>
-					<a href="#aprop">A propos</a>
-					<a href="#contact">Contact</a>
+				<div class="navlinks-container" id="navlinks-container">
+					<a class="nav-links" href="#acc" aria-current="page"
+						>Accueil</a
+					>
+					<a class="nav-links" href="#trava">Travaux</a>
+					<a class="nav-links" href="#aprop">A propos</a>
+					<a class="nav-links" href="#contact">Contact</a>
 				</div>
 			</div>
 		</nav>
@@ -108,11 +111,12 @@
 						href="https://www.facebook.com"
 					>
 						<figure>
-							<img src="/img/fbgrey.svg" alt="logo de facebook" />
+							<img src="" alt="logo de facebook" />
 						</figure>
 					</a>
 				</li>
 			</ul>
 		</footer>
+		<script src="/js/nav_bar.js"></script>
 	</body>
 </html>

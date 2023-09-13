@@ -8,7 +8,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;0,800;0,900;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@10..48,200;10..48,300;10..48,400;10..48,500;10..48,600;10..48,700;10..48,800&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400;500;700;900&display=swap");
 html {
   line-height: 1.15; /* 1 */
@@ -389,7 +388,6 @@ html:hover {
 /* cinzel */
 /* montserrat */
 /* PlayFair */
-/* Bricolage Grotesque */
 /* roboto  */
 /**
  * Basic typography style for copy text
@@ -488,24 +486,24 @@ footer .footer_col-container h3 {
   font-weight: 700;
   color: white;
   position: relative;
-  text-decoration: underline;
+  /* text-decoration: underline;
   text-decoration-color: white;
   text-decoration-thickness: 4px;
   text-underline-offset: 10px;
   transition: 0.2s;
-  /* &::after {
-  	content: "";
-  	height: 3px;
-  	width: 70px;
-  	background-color: $rouge;
-  	position: absolute;
-  	bottom: 0;
-  	border-radius: 20px;
+  &:hover {
+  	text-decoration-color: $rouge;
+  	text-underline-offset: 15px;
   } */
 }
-footer .footer_col-container h3:hover {
-  text-decoration-color: #a02c57;
-  text-underline-offset: 15px;
+footer .footer_col-container h3::after {
+  content: "";
+  height: 3px;
+  width: 70px;
+  background-color: #a02c57;
+  position: absolute;
+  bottom: 0;
+  border-radius: 20px;
 }
 footer .footer_col-container li {
   font-size: 16px;
@@ -578,18 +576,83 @@ footer .footer_col-container li {
   margin-left: 10px;
 }
 
+.main-navlinks {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-right: 15px;
+}
 .main-navlinks .hamburger {
-  margin-right: 10px;
+  height: 40px;
+  width: 40px;
+  border: none;
+  cursor: pointer;
+  overflow: hidden;
+  background: none;
+}
+.main-navlinks .hamburger span {
+  height: 4px;
+  width: 30px;
+  background-color: white;
+  display: block;
+  border-radius: 50px;
+  transition: transform 0.3s ease-out;
+}
+.main-navlinks .hamburger span:nth-child(1) {
+  transform: translateY(-7px);
+}
+.main-navlinks .hamburger span:nth-child(3) {
+  transform: translateY(7px);
+}
+.main-navlinks .hamburger .trait1-effect {
+  transform: translateY(4px) rotate(45deg) !important;
+}
+.main-navlinks .hamburger .trait2-effect {
+  transform: translateX(-40px);
+}
+.main-navlinks .hamburger .trait3-effect {
+  transform: translateY(-4px) rotate(-45deg) !important;
 }
 
 .navlinks-container {
   position: absolute;
-  background-color: blue;
+  background-color: #222222;
   display: flex;
   flex-direction: column;
   top: 70px;
-  left: 0;
-  padding: 25px;
+  right: 0;
+  padding: 10px 25px 10px 50px;
+  transform: translateX(400px);
+  transition: transform 0.4s;
+  width: 100%;
+  border-top: 1px solid white;
+}
+.navlinks-container a {
+  width: 100%;
+  text-align: right;
+  padding: 15px 0;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+  font-size: 17px;
+  animation: bounce 0.7s;
+}
+.navlinks-container a:last-child {
+  margin-bottom: 0;
+}
+
+@keyframes bounce {
+  0%, 20%, 50%, 80%, 100% {
+    transform: translateX(0);
+  }
+  40% {
+    transform: translateX(-10px);
+  }
+  60% {
+    transform: translateX(-5px);
+  }
+}
+body {
+  overflow-x: hidden;
 }
 
 p {
