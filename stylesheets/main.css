@@ -708,6 +708,11 @@ footer .footer_col-container li {
     text-underline-offset: 5px;
   }
 }
+@media (min-width: 1024px) {
+  #nav-bar {
+    padding: 0 15%;
+  }
+}
 body {
   overflow-x: hidden;
 }
@@ -798,6 +803,6 @@ p {
 }
 @media (min-width: 1024px) {
   .main #contact-baneer {
-    padding: 60px 10% 0 10%;
+    padding: 60px 15% 0 15%;
   }
 }/*# sourceMappingURL=main.css.map */
