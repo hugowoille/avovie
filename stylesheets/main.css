@@ -563,7 +563,7 @@ footer .footer_col-container li {
 }
 
 #nav-bar {
-  background-color: #222222;
+  background-color: #2b2b2b;
   height: 70px;
   position: fixed;
   width: 100%;
@@ -571,18 +571,18 @@ footer .footer_col-container li {
   align-items: center;
   justify-content: space-between;
   transition: transform 0.3s;
+  padding: 0 15px;
+  z-index: 10;
 }
 
 #logo-nav {
   height: 50px;
-  margin-left: 10px;
 }
 
 .main-navlinks {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 15px;
 }
 .main-navlinks .hamburger {
   height: 40px;
@@ -618,9 +618,10 @@ footer .footer_col-container li {
 
 .navlinks-container {
   position: absolute;
-  background-color: #222222;
+  background-color: #2b2b2b;
   display: flex;
   flex-direction: column;
+  align-items: flex-end;
   top: 70px;
   right: 0;
   padding: 10px 25px 10px 50px;
@@ -630,19 +631,25 @@ footer .footer_col-container li {
   border-top: 1px solid rgb(88, 88, 88);
 }
 .navlinks-container a {
-  width: 100%;
   text-align: right;
   padding: 15px 0;
   color: white;
   font-family: "Montserrat", sans-serif;
   font-size: 17px;
   animation: bounce 0.7s;
-  text-decoration: underline;
-  text-decoration-thickness: 2px;
-  text-decoration-color: #a02c57;
+  position: relative;
 }
 .navlinks-container a:last-child {
   margin-bottom: 0;
+}
+.navlinks-container a:after {
+  content: "";
+  display: block;
+  height: 1px;
+  width: calc(100% + 100px);
+  background: #a02c57;
+  position: absolute;
+  right: 0;
 }
 
 @keyframes bounce {
@@ -656,6 +663,51 @@ footer .footer_col-container li {
     transform: translateX(-2.5px);
   }
 }
+@media (min-width: 768px) {
+  #nav-bar {
+    height: 60px;
+    padding: 0 25px;
+  }
+  #logo-nav {
+    height: 50px;
+  }
+  .main-navlinks .hamburger {
+    display: none;
+  }
+  .navlinks-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    transform: unset;
+    position: unset;
+    border: none;
+    padding: 0;
+    margin-left: 30px;
+  }
+  .navlinks-container a {
+    text-decoration: none;
+    animation: none;
+    padding: 10px 15px;
+    border-right: 1px solid rgb(88, 88, 88);
+    font-size: 15px;
+    transition: text-underline-offset 0.3s;
+    text-decoration: underline;
+    text-decoration-color: #a02c57;
+    text-underline-offset: 3px;
+    text-decoration-thickness: 2px;
+  }
+  .navlinks-container a:last-child {
+    border-right: none;
+    padding-right: 0;
+  }
+  .navlinks-container a::after {
+    display: none;
+  }
+  .navlinks-container a:hover {
+    text-underline-offset: 5px;
+  }
+}
 body {
   overflow-x: hidden;
 }
@@ -666,7 +718,7 @@ p {
 }
 
 .main {
-  background-color: rgb(69, 70, 90);
+  background-color: rgb(224, 224, 224);
   width: 100%;
   height: 1000px;
   box-shadow: 10px 10px 23px -7px rgba(0, 0, 0, 0.75);
@@ -680,5 +732,72 @@ p {
 @media (min-width: 1025px) {
   .main {
     margin-bottom: 345px;
+  }
+}
+.main #contact-baneer {
+  display: none;
+}
+@media (min-width: 768px) {
+  .main #contact-baneer {
+    display: block;
+    height: 152px;
+    width: 100%;
+    background: #1d1d1d;
+    display: flex;
+    flex-direction: row;
+    padding: 60px 25px 0 25px;
+    font-size: 17px;
+  }
+  .main #contact-baneer #openning-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-basis: 350px;
+    position: relative;
+    padding: 10px 0;
+  }
+  .main #contact-baneer #openning-container::after {
+    content: "";
+    height: 60px;
+    width: 1px;
+    background: #a02c57;
+    position: absolute;
+    right: 0;
+  }
+  .main #contact-baneer #openning-container p {
+    font-family: "Montserrat", sans-serif;
+  }
+  .main #contact-baneer #openning-container #openning {
+    width: 100%;
+  }
+  .main #contact-baneer #openning-container i {
+    font-size: 30px;
+    color: #a02c57;
+    margin-right: 20px;
+    padding-bottom: 2px;
+  }
+  .main #contact-baneer #call-number-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 0;
+    padding-left: 50px;
+  }
+  .main #contact-baneer #call-number-container p {
+    font-family: "Montserrat", sans-serif;
+  }
+  .main #contact-baneer #call-number-container #contact-us {
+    width: 100%;
+  }
+  .main #contact-baneer #call-number-container i {
+    font-size: 30px;
+    color: #a02c57;
+    margin-right: 20px;
+    padding-bottom: 2px;
+  }
+}
+@media (min-width: 1024px) {
+  .main #contact-baneer {
+    padding: 60px 10% 0 10%;
   }
 }/*# sourceMappingURL=main.css.map */
