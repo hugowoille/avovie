@@ -625,7 +625,7 @@ footer .footer_col-container li {
   transform: translateX(400px);
   transition: transform 0.4s, opacity 0.4s;
   width: 100%;
-  border-top: 1px solid white;
+  border-top: 1px solid rgb(88, 88, 88);
 }
 .navlinks-container a {
   width: 100%;
