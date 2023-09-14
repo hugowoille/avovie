@@ -32,3 +32,24 @@ hamburger.addEventListener("click", () => {
 		isHamburgerClicked = false;
 	}
 });
+
+let lastScrollTop = 0;
+// This Varibale will store the top position
+const navbar = document.getElementById("nav-bar");
+
+window.addEventListener("scroll", function () {
+	//on every scroll this funtion will be called
+
+	const scrollTop = window.scrollY;
+	console.log("scrollTop:", scrollTop);
+	if (scrollTop > lastScrollTop) {
+		//if it will be greater than the previous
+		navbar.style.transform = "translateY(-70px)";
+		//set the value to the negetive of height of navbar
+	} else {
+		navbar.style.transform = "translateY(0)";
+	}
+
+	lastScrollTop = scrollTop; //New Position Stored
+	console.log("lastScrollTop:", lastScrollTop);
+});

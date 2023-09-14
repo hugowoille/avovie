@@ -565,10 +565,12 @@ footer .footer_col-container li {
 #nav-bar {
   background-color: #222222;
   height: 70px;
-  position: relative;
+  position: fixed;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
+  transition: transform 0.3s;
 }
 
 #logo-nav {
@@ -622,7 +624,7 @@ footer .footer_col-container li {
   top: 70px;
   right: 0;
   padding: 10px 25px 10px 50px;
-  transform: translateX(400px);
+  transform: translate(100%);
   transition: transform 0.4s, opacity 0.4s;
   width: 100%;
   border-top: 1px solid rgb(88, 88, 88);
@@ -635,6 +637,9 @@ footer .footer_col-container li {
   font-family: "Montserrat", sans-serif;
   font-size: 17px;
   animation: bounce 0.7s;
+  text-decoration: underline;
+  text-decoration-thickness: 2px;
+  text-decoration-color: #a02c57;
 }
 .navlinks-container a:last-child {
   margin-bottom: 0;
