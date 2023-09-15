@@ -728,7 +728,6 @@ p {
   height: 1000px;
   box-shadow: 10px 10px 23px -7px rgba(0, 0, 0, 0.75);
   margin-bottom: 730px;
-  /* Contact baneer */
 }
 @media (min-width: 468px) {
   .main {
@@ -740,11 +739,14 @@ p {
     margin-bottom: 345px;
   }
 }
-.main #contact-baneer {
+
+/* Contact baneer */
+#contact-baneer {
   display: none;
 }
+
 @media (min-width: 768px) {
-  .main #contact-baneer {
+  #contact-baneer {
     display: block;
     height: 152px;
     width: 100%;
@@ -754,7 +756,7 @@ p {
     padding: 60px 25px 0 25px;
     font-size: 17px;
   }
-  .main #contact-baneer #openning-container {
+  #contact-baneer #openning-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -762,7 +764,7 @@ p {
     position: relative;
     padding: 10px 0;
   }
-  .main #contact-baneer #openning-container::after {
+  #contact-baneer #openning-container::after {
     content: "";
     height: 60px;
     width: 1px;
@@ -770,32 +772,32 @@ p {
     position: absolute;
     right: 0;
   }
-  .main #contact-baneer #openning-container p {
+  #contact-baneer #openning-container p {
     font-family: "Montserrat", sans-serif;
   }
-  .main #contact-baneer #openning-container #openning {
+  #contact-baneer #openning-container #openning {
     width: 100%;
   }
-  .main #contact-baneer #openning-container i {
+  #contact-baneer #openning-container i {
     font-size: 30px;
     color: #a02c57;
     margin-right: 20px;
     padding-bottom: 2px;
   }
-  .main #contact-baneer #call-number-container {
+  #contact-baneer #call-number-container {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
     padding: 10px 0;
     padding-left: 50px;
   }
-  .main #contact-baneer #call-number-container p {
+  #contact-baneer #call-number-container p {
     font-family: "Montserrat", sans-serif;
   }
-  .main #contact-baneer #call-number-container #contact-us {
+  #contact-baneer #call-number-container #contact-us {
     width: 100%;
   }
-  .main #contact-baneer #call-number-container i {
+  #contact-baneer #call-number-container i {
     font-size: 30px;
     color: #a02c57;
     margin-right: 20px;
@@ -803,7 +805,7 @@ p {
   }
 }
 @media (min-width: 1024px) {
-  .main #contact-baneer {
+  #contact-baneer {
     padding: 60px 15% 0 15%;
   }
 }/*# sourceMappingURL=main.css.map */

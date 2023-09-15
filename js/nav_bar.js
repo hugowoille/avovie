@@ -62,7 +62,9 @@ window.addEventListener("scroll", function () {
 }).observe(document.body); */
 
 new ResizeObserver((entries) => {
-	entries[0].contentRect.width <= 767
-		? (navLinksContainer.style.transition = "transform 0.4s, opacity 0.4s")
-		: (navLinksContainer.style.transition = "none");
+	if (entries[0].contentRect.width <= 767) {
+		navLinksContainer.style.transition = "transform 0.4s, opacity 0.4s";
+	} else {
+		navLinksContainer.style.transition = "none";
+	}
 }).observe(document.body);
