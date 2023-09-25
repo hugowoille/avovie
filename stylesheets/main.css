@@ -449,6 +449,75 @@ body {
   width: 1px;
 }
 
+/* Contact baneer */
+#contact-baneer {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  #contact-baneer {
+    display: block;
+    height: 152px;
+    width: 100%;
+    background: #1d1d1d;
+    display: flex;
+    flex-direction: row;
+    padding: 60px 25px 0 25px;
+    font-size: 17px;
+  }
+  #contact-baneer #openning-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    flex-basis: 350px;
+    position: relative;
+    padding: 10px 0;
+  }
+  #contact-baneer #openning-container::after {
+    content: "";
+    height: 60px;
+    width: 1px;
+    background: #a02c57;
+    position: absolute;
+    right: 0;
+  }
+  #contact-baneer #openning-container p {
+    font-family: "Montserrat", sans-serif;
+  }
+  #contact-baneer #openning-container #openning {
+    width: 100%;
+  }
+  #contact-baneer #openning-container i {
+    font-size: 30px;
+    color: #a02c57;
+    margin-right: 20px;
+    padding-bottom: 2px;
+  }
+  #contact-baneer #call-number-container {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    padding: 10px 0;
+    padding-left: 50px;
+  }
+  #contact-baneer #call-number-container p {
+    font-family: "Montserrat", sans-serif;
+  }
+  #contact-baneer #call-number-container #contact-us {
+    width: 100%;
+  }
+  #contact-baneer #call-number-container i {
+    font-size: 30px;
+    color: #a02c57;
+    margin-right: 20px;
+    padding-bottom: 2px;
+  }
+}
+@media (min-width: 1024px) {
+  #contact-baneer {
+    padding: 60px 15% 0 15%;
+  }
+}
 footer {
   display: flex;
   flex-direction: column;
@@ -740,72 +809,20 @@ p {
   }
 }
 
-/* Contact baneer */
-#contact-baneer {
-  display: none;
+main {
+  position: relative;
+  perspective: 2000px;
 }
-
-@media (min-width: 768px) {
-  #contact-baneer {
-    display: block;
-    height: 152px;
-    width: 100%;
-    background: #1d1d1d;
-    display: flex;
-    flex-direction: row;
-    padding: 60px 25px 0 25px;
-    font-size: 17px;
-  }
-  #contact-baneer #openning-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    flex-basis: 350px;
-    position: relative;
-    padding: 10px 0;
-  }
-  #contact-baneer #openning-container::after {
-    content: "";
-    height: 60px;
-    width: 1px;
-    background: #a02c57;
-    position: absolute;
-    right: 0;
-  }
-  #contact-baneer #openning-container p {
-    font-family: "Montserrat", sans-serif;
-  }
-  #contact-baneer #openning-container #openning {
-    width: 100%;
-  }
-  #contact-baneer #openning-container i {
-    font-size: 30px;
-    color: #a02c57;
-    margin-right: 20px;
-    padding-bottom: 2px;
-  }
-  #contact-baneer #call-number-container {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    padding: 10px 0;
-    padding-left: 50px;
-  }
-  #contact-baneer #call-number-container p {
-    font-family: "Montserrat", sans-serif;
-  }
-  #contact-baneer #call-number-container #contact-us {
-    width: 100%;
-  }
-  #contact-baneer #call-number-container i {
-    font-size: 30px;
-    color: #a02c57;
-    margin-right: 20px;
-    padding-bottom: 2px;
-  }
+main img {
+  position: absolute;
+  width: 500px;
+  height: 600px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  left: 50%;
+  translate: -50% 0;
+  transition: all 0.4s;
 }
-@media (min-width: 1024px) {
-  #contact-baneer {
-    padding: 60px 15% 0 15%;
-  }
+main img:hover {
+  rotate: x 35deg;
 }/*# sourceMappingURL=main.css.map */

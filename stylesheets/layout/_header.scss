@@ -1,3 +1,76 @@
 // -----------------------------------------------------------------------------
 // This file contains all styles related to the header of the site/application.
 // -----------------------------------------------------------------------------
+
+/* Contact baneer */
+
+#contact-baneer {
+	display: none;
+}
+@media (min-width: 768px) {
+	#contact-baneer {
+		display: block;
+		height: 152px;
+		width: 100%;
+		background: #1d1d1d;
+		display: flex;
+		flex-direction: row;
+		padding: 60px 25px 0 25px;
+
+		font-size: 17px;
+
+		#openning-container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+			flex-basis: 350px;
+			position: relative;
+			padding: 10px 0;
+			&::after {
+				content: "";
+				height: 60px;
+				width: 1px;
+				background: $rouge;
+				position: absolute;
+				right: 0;
+			}
+			p {
+				font-family: $montserrat;
+			}
+			#openning {
+				width: 100%;
+			}
+			i {
+				font-size: 30px;
+				color: $rouge;
+				margin-right: 20px;
+				padding-bottom: 2px;
+			}
+		}
+		#call-number-container {
+			display: flex;
+			flex-wrap: wrap;
+			align-items: center;
+
+			padding: 10px 0;
+			padding-left: 50px;
+			p {
+				font-family: $montserrat;
+			}
+			#contact-us {
+				width: 100%;
+			}
+			i {
+				font-size: 30px;
+				color: $rouge;
+				margin-right: 20px;
+				padding-bottom: 2px;
+			}
+		}
+	}
+}
+@media (min-width: 1024px) {
+	#contact-baneer {
+		padding: 60px 15% 0 15%;
+	}
+}
